@@ -18,10 +18,12 @@ het commando wat je kan uitvoeren als controle.
 Voor de opdracht zal je aan de slag gaan met een project tool. Dit is om bij te houden hoever een project staat, welke taken er zijn en 
 wie de taken moeten uitvoeren. De functionaliteit bestaat uit het volgende:
 
-•	Studenten kunnen een project aanmaken
-•	Bij een project kunnen allerlei taken horen
-•	Een taak heeft een status, bijvoorbeeld: Todo, Doing, Testing, Verify, Done
-•	Een taak kan verschillende labels hebben, zoals: front-end, backend, documentation, bug, feature
+<ul>
+<li>Studenten kunnen een project aanmaken</li>
+<li>Bij een project kunnen allerlei taken horen</li>
+<li>Een taak heeft een status, bijvoorbeeld: Todo, Doing, Testing, Verify, Done</li>
+<li>Een taak kan verschillende labels hebben, zoals: front-end, backend, documentation, bug, feature</li>
+</ul>
 
 En ja, het ziet er misschien lastig uit, maar de opdrachten zullen steeds een klein stapje zijn. De opdrachten zullen ook heel precies zijn, 
 er zijn namelijk automatische testen beschikbaar waar op alle details wordt gelet.
