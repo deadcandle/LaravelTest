@@ -27,3 +27,6 @@ wie de taken moeten uitvoeren. De functionaliteit bestaat uit het volgende:
 
 En ja, het ziet er misschien lastig uit, maar de opdrachten zullen steeds een klein stapje zijn. De opdrachten zullen ook heel precies zijn, 
 er zijn namelijk automatische testen beschikbaar waar op alle details wordt gelet.
+
+## Contact
+Wil je ook aan de slag met deze opdrachten en heb je hiervoor de lessenserie met opdracht beschrijvingen nodig. Neem dan contact op met mij via m.koningstein@tcrmbo.nl 
