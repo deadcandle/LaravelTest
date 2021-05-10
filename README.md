@@ -28,5 +28,25 @@ wie de taken moeten uitvoeren. De functionaliteit bestaat uit het volgende:
 En ja, het ziet er misschien lastig uit, maar de opdrachten zullen steeds een klein stapje zijn. De opdrachten zullen ook heel precies zijn, 
 er zijn namelijk automatische testen beschikbaar waar op alle details wordt gelet.
 
+## De installatie (bijv wamp.net server)
+Voer de volgende stappen uit om met deze opdrachten aan de slag te gaan.
+<ul>
+    <li>Clone het project in een directory</li>
+    <li>Maak in wamp.net een project aan en zet de document root op de public map. Gebruik minimaal php versie 8</li>
+    <li>Zorg dat je bij de phpMyAdmin kan komen</li>
+    <li>Maak 2 databases aan, 1 voor de website en 1 voor testen
+        <ul>
+            <li>Database 1: opdrachten</li>
+            <li>Database 2: opdrachtentest (Let op, gebruik je een andere naam, wijzig dit in phpunit.xml</li>
+        </ul>
+    </li>
+    <li>Maak een .env file aan, en kopier de .env.example daar naartoe</li>
+    <li>In de .env file, check de database naam (opdrachten) en de username (root)</li>
+    <li>Ga naar je root directory van je project in de terminal, en voer daar uit: composer install</li>
+    <li>Voer dan in de terminal uit: php artisan key:generate</li>
+</ul>
+
+Gebruik je een andere omgeving, dan zal je soortgelijke stappen moeten nemen om de opdrachten klaar te zetten.
+
 ## Contact
 Wil je ook aan de slag met deze opdrachten en heb je hiervoor de lessenserie met opdracht beschrijvingen nodig. Neem dan contact op met mij via m.koningstein@tcrmbo.nl 
