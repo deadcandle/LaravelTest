@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Project;
+use App\Models\User;
 
 beforeEach(function (){
     $this->project = Project::factory()->create();
@@ -31,6 +32,7 @@ test('a project name is maximum 45 characters long', function(){
 })->group('Opdracht6');
 
 test('the student user is correct in the database', function(){
+    $this->seed('RoleAndPermissionSeeder');
     $this->seed('UserSeeder');
     $user = User::find(1);
     expect($user->name)->toBe('student');
@@ -38,6 +40,7 @@ test('the student user is correct in the database', function(){
 })->group('Opdracht10');
 
 test('the teacher user is correct in the database', function(){
+    $this->seed('RoleAndPermissionSeeder');
     $this->seed('UserSeeder');
     $user = User::find(2);
     expect($user->name)->toBe('teacher');
@@ -45,6 +48,7 @@ test('the teacher user is correct in the database', function(){
 })->group('Opdracht10');
 
 test('the admin user is correct in the database', function(){
+    $this->seed('RoleAndPermissionSeeder');
     $this->seed('UserSeeder');
     $user = User::find(3);
     expect($user->name)->toBe('admin');

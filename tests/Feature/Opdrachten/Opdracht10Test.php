@@ -3,6 +3,7 @@
 use App\Models\User;
 
 beforeEach(function (){
+    $this->seed('RoleAndPermissionSeeder');
     $this->seed('UserSeeder');
 });
 
