@@ -56,7 +56,7 @@ test('a student can store a project in the database', function () {
 })->group('ProjectStore', 'Opdracht11', 'Website');
 
 test('a guest can not store a project in the database', function () {
-    $this->postJson(route('orders.store'))
+    $this->postJson(route('projects.store'))
         ->assertStatus(401);
 })->group('ProjectStore', 'Opdracht11', 'Website');
 
