@@ -56,7 +56,8 @@ test('a student can store a project in the database', function () {
 })->group('ProjectStore', 'Opdracht11', 'Website');
 
 test('a guest can not store a project in the database', function () {
-    $this->postJson(route('projects.store'))
+    $project = Project::factory()->make(['name' => 'testproject', 'description' => 'dit is een test project']);
+    $this->postJson(route('projects.store'), $project->toArray())
         ->assertStatus(401);
 })->group('ProjectStore', 'Opdracht11', 'Website');
 
