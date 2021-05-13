@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Activity;
 use App\Models\Status;
 use App\Models\Project;
 use App\Models\Task;
@@ -10,28 +11,28 @@ beforeEach(function (){
     $this->seed('RoleAndPermissionSeeder');
     $this->seed('UserSeeder');
     $this->project = Project::factory()->create();
-    $this->status1 = Status::factory()->create();
+    $this->activity = Activity::factory()->create();
     $this->task = Task::factory()->create([
         'user_id' => 1,
-        'statuses_id' => $this->status1->id,
+        'activity_id' => $this->activity->id,
         'project_id' => $this->project->id
     ]);
 });
 
-// Tests voor status
-test('Data from factory is in the status table', function () {
-    $this->assertDatabaseHas('statuses', [
-        'id' => $this->status1->id,
-        'status' => $this->status1->status
+// Tests voor activity
+test('Data from factory is in the activity table', function () {
+    $this->assertDatabaseHas('activities', [
+        'id' => $this->activity->id,
+        'name' => $this->activity->name
     ]);
 })->group('Opdracht12_13');
 
-test('a status id is a int', function(){
-    expect($this->status1->id)->toBeInt();
+test('a activity id is a int', function(){
+    expect($this->activity->id)->toBeInt();
 })->group('Opdracht12_13');
 
-test('a status is a string', function(){
-    expect($this->status1->status)->toBeString();
+test('a activity name is a string', function(){
+    expect($this->activity->name)->toBeString();
 })->group('Opdracht12_13');
 
 // Tests voor tasks
@@ -43,7 +44,7 @@ test('Data from factory is in the tasks table', function () {
         'enddate' => $this->task->enddate->toDateString(),
         'user_id' => $this->task->user_id,
         'project_id' => $this->task->project_id,
-        'statuses_id' => $this->task->statuses_id
+        'activity_id' => $this->task->activity_id
     ]);
 })->group('Opdracht12_13');
 
@@ -71,6 +72,8 @@ test('a task belongs to a project', function(){
     expect($this->task->project)->toBeInstanceOf(Project::class); // relatie check
 })->group('Opdracht12_13');
 
-test('a task has a status', function(){
-    expect($this->task->statuses)->toBeInstanceOf(Status::class); // relatie check
+/*
+test('a task has a activity', function(){
+    expect($this->task->activities)->toBeInstanceOf(Activity::class); // relatie check
 })->group('Opdracht12_13');
+*/

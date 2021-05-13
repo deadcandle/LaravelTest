@@ -1,6 +1,7 @@
 <?php
 
 use \Illuminate\Foundation\Testing\DatabaseMigrations;
+use \Illuminate\Foundation\Testing\WithFaker;
 /*
 |--------------------------------------------------------------------------
 | Test Case
@@ -12,7 +13,7 @@ use \Illuminate\Foundation\Testing\DatabaseMigrations;
 |
 */
 
-uses(Tests\TestCase::class, DatabaseMigrations::class)->in('Feature', 'Unit');
+uses(Tests\TestCase::class, DatabaseMigrations::class, WithFaker::class)->in('Feature', 'Unit');
 
 /*
 |--------------------------------------------------------------------------
