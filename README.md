@@ -21,7 +21,7 @@ wie de taken moeten uitvoeren. De functionaliteit bestaat uit het volgende:
 <ul>
 <li>Studenten kunnen een project aanmaken</li>
 <li>Bij een project kunnen allerlei taken horen</li>
-<li>Een taak heeft een status, bijvoorbeeld: Todo, Doing, Testing, Verify, Done</li>
+<li>Een taak heeft een activity status, bijvoorbeeld: Todo, Doing, Testing, Verify, Done</li>
 <li>Een taak kan verschillende labels hebben, zoals: front-end, backend, documentation, bug, feature</li>
 </ul>
 
